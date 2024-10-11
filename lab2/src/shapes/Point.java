@@ -25,10 +25,13 @@ public class Point extends Shape{
         this.Y = Y;
     }
 
+    public static double distance(Point point1, Point point2){
+        return Math.sqrt(Math.pow(point1.getX() - point2.getX(), 2) + Math.pow(point1.getY() - point2.getY(), 2));
+    }
     @Override
-    public void move(double x, double y) {
-        this.X += x;
-        this.Y += y;
+    public void move(double X, double Y) {
+        this.X += X;
+        this.Y += Y;
     }
 
     @Override
@@ -42,8 +45,8 @@ public class Point extends Shape{
     }
     @Override
     public void draw() {
-       System.out.println("Point shape");
-       System.out.println("Point centre: " + "(" + getX() + ";" + getY() + ")");
-       System.out.println("Point color: " + getColor());
+        System.out.println("Фигура: Точка");
+        System.out.println("Координаты точки: (" + X + ", " + Y + ")");
+        System.out.println("Цвет точки: " + getColor());
     }
 }

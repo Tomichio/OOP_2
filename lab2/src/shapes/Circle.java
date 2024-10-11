@@ -10,15 +10,18 @@ public class Circle extends Shape{
         radius = 1;
         point = new Point();
     }
-    public Circle(Point point, double radius) throws Exception {
-        this.validate(radius);
+    public Circle(Point point, double radius) /*throws Exception*/ {
+        //this.validate(radius);
         this.point = point;
         this.radius = radius;
     }
 
-    public void setRadius(double radius) throws Exception {
-        this.validate(radius);
+    public void setRadius(double radius) /*throws Exception*/ {
+        //this.validate(radius);
         this.radius = radius;
+    }
+    public double getRadius(){
+        return radius;
     }
     @Override
     public void move(double x, double y) {
@@ -28,14 +31,19 @@ public class Circle extends Shape{
 
     @Override
     public double getArea() {
-        return 0;
+        return Math.PI * this.radius * this.radius;
     }
     @Override
     public double getPerimeter() {
-        return 0;
+        return 2 * Math.PI * this.radius;
     }
     @Override
     public void draw() {
-
+        System.out.println("Фигура: Круг");
+        System.out.println("Центр круга: (" + this.point.getX() + ", " + this.point.getY() + ")");
+        System.out.println("Радиус круга: " + this.radius);
+        System.out.println("Площадь круга: " + this.getArea());
+        System.out.println("Периметр круга: " + this.getPerimeter());
+        System.out.println("Цвет круга: " + getColor());
     }
 }
