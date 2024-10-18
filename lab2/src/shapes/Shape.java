@@ -12,7 +12,7 @@ public abstract class Shape {
         this.color = color;
     }
     public abstract void move(double x, double y);
-    public abstract double getArea();
+    public abstract double getSquare();
     public abstract double getPerimeter();
     public abstract void draw();
 }

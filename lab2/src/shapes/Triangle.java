@@ -7,7 +7,7 @@ public class Triangle extends Shape{
     private Point pointC = new Point();
 
     private void validate() throws Exception{
-        if (getArea() == 0) throw new java.lang.Exception("Точки не должны располагаться на одной прямой");
+        if (getSquare() == 0) throw new java.lang.Exception("Точки не должны располагаться на одной прямой");
     }
 
     public Triangle(){}
@@ -55,7 +55,7 @@ public class Triangle extends Shape{
         pointC.move(x, y);
     }
 
-    public double getArea(){
+    public double getSquare(){
         double p = getPerimeter() / 2;
         double dist1 = Point.distance(pointA, pointB);
         double dist2 = Point.distance(pointA, pointC);
@@ -77,7 +77,7 @@ public class Triangle extends Shape{
         System.out.print("Противоположные вершины Треугольника: (" + pointA.getX() + ", " + pointA.getY() + "); ");
         System.out.println("(" + pointB.getX() + ", " + pointB.getY() + "); ");
         System.out.println("(" + pointC.getX() + ", " + pointC.getY() + "); ");
-        System.out.println("Площадь Треугольника: " + this.getArea());
+        System.out.println("Площадь Треугольника: " + this.getSquare());
         System.out.println("Периметр Треугольника: " + this.getPerimeter());
         System.out.println("Цвет Треугольника: " + getColor());
     }

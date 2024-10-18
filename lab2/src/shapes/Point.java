@@ -7,6 +7,12 @@ public class Point extends Shape{
         X = 0;
         Y = 0;
     }
+
+    public Point(double x, double y, Color color){
+        this.X = x;
+        this.Y = y;
+        setColor(color);
+    }
     public Point(double X, double Y){
         this.X = X;
         this.Y = Y;
@@ -35,7 +41,7 @@ public class Point extends Shape{
     }
 
     @Override
-    public double getArea() {
+    public double getSquare() {
         return 0;
     }
 

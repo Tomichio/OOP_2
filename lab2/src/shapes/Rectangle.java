@@ -44,7 +44,7 @@ public class Rectangle extends Shape{
     }
 
     @Override
-    public double getArea(){
+    public double getSquare(){
         return Math.abs((pointA.getX() - pointB.getX()) * (pointA.getY() - pointB.getY()));
     }
 
@@ -58,7 +58,7 @@ public class Rectangle extends Shape{
         System.out.println("Фигура: Прямоугольник");
         System.out.print("Противоположные вершины прямоугольника: (" + pointA.getX() + ", " + pointA.getY() + "); ");
         System.out.println("(" + pointB.getX() + ", " + pointB.getY() + ")");
-        System.out.println("Площадь прямоугольника: " + this.getArea());
+        System.out.println("Площадь прямоугольника: " + this.getSquare());
         System.out.println("Периметр прямоугольника: " + this.getPerimeter());
         System.out.println("Цвет прямоугольника: " + getColor());
     }
